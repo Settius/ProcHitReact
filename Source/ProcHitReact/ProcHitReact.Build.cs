@@ -13,7 +13,7 @@ public class ProcHitReact : ModuleRules
 			new string[]
 			{
 				"Core",
-				"GameplayTags",
+				"GameplayTags", "AsyncMixin",
 			}
 		);
 			

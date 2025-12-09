@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AsyncMixin.h"
 #include "GameplayTagContainer.h"
 #include "HitReactTypes.h"
 #include "Physics/HitReactPhysics.h"
@@ -10,7 +11,6 @@
 #include "Params/HitReactImpulse.h"
 #include "Params/HitReactParams.h"
 #include "Params/HitReactTrigger.h"
-#include "ThirdParty/AsyncMixinProc.h"
 #include "System/HitReactVersioning.h"
 #include "HitReact.generated.h"
 
@@ -24,7 +24,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHitReactToggleStateChanged, EHitR
  * Component for applying hit reactions to a skeletal mesh
  */
 UCLASS(Config=Game, ClassGroup=(Custom), Blueprintable, meta=(BlueprintSpawnableComponent))
-class PROCHITREACT_API UHitReact : public UActorComponent, public FAsyncMixinProc
+class PROCHITREACT_API UHitReact : public UActorComponent, public FAsyncMixin
 {
 	GENERATED_BODY()
 
